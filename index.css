@@ -1,0 +1,133 @@
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	background-image: url('background.jpg');
+	width: 100%;
+	height: 100%;
+}
+img {
+	width: 320px;
+	height: 180px;
+}
+.veg {
+	position: relative;
+	display: inline-block;
+}
+.slide:hover .description {
+	display: block;
+	z-index: 1;
+}
+.description img {
+	width: 400px;
+	height: 300px;	
+}
+.wrapper {
+	width: 100%;
+	position: relative;
+	max-width: 1300px;
+	margin: 0 auto;
+	margin-top: 300px;
+}
+.slides {
+	position: absolute;
+	white-space: nowrap;
+	z-index: 0;
+	border: 7px dotted black;
+}
+.slide {
+	display: inline-block;
+	position: relative;
+	}
+.description {
+	display: none;
+	z-index: 0;
+	position: absolute;																	q
+	margin-top: -200px;
+	top: -50%;
+	left: -50px;
+	width: 400px;
+	height: 500px;
+	border: 2px solid black;
+}
+.about_veg {
+	width: 400px;
+	height: 200px;
+	float: left;
+	text-align: center;
+	position: relative;
+	background-color: grey;
+}
+span {
+	height: 200px;
+	width: 400px;
+	display: block;
+	word-wrap: break-word;
+	white-space: normal;
+}
+.wrapper .controls {
+	left: 50%;
+	margin-left: -98px;
+	position: absolute;
+}
+.wrapper #control {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	margin: 20px;
+}
+.wrapper #control:after{
+	margin: 5px;
+	border: 10px solid white;
+	content: " ";
+	display: block;	
+	position: absolute;
+	border-radius: 50%;
+	top: 200px;
+}
+.wrapper > input {
+	display: none;
+}
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3{
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
+.controls label:hover {
+	opacity: 0.5;
+}
+.modal {
+	width: 100%;
+	height: 100vh;
+}
+.modal {
+	background: grey;
+	display: none;
+}
+.modal:target {
+	display: block;
+	position: fixed;
+	z-index: 3;
+}
+.modal:target + .wrapper {
+	display: none;
+}
+.krest {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.full {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin-left: 25%;
+	margin-top: 10%;
+}
